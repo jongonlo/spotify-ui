@@ -13,17 +13,17 @@ export const TrackInfo = ({ track }: TrackInfoProps) => {
           <div className='flex flex-col w-full'>
             <span className='text-lg font-semibold'>Track Information</span>
             <div className='flex flex-col items-start text-start gap-4 mt-8'>
-              <span>ISRC: {track.isrc}</span>
+              <span><span className='font-bold'>ISRC:</span> {track.isrc}</span>
               <Separator orientation='h' />
-              <span>Track Name: {track.name}</span>
+              <span><span className='font-bold'>Track Name:</span> {track.name}</span>
               <Separator orientation='h' />
-              <span>Artist Name: {track.artistName}</span>
+              <span><span className='font-bold'>Artist Name:</span> {track.artistName}</span>
               <Separator orientation='h' />
-              <span>Album Name: {track.albumName}</span>
+              <span><span className='font-bold'>Album Name:</span> {track.albumName}</span>
               <Separator orientation='h' />
-              <span>Explicit: {track.explicit ? 'Yes' : 'No'}</span>
+              <span><span className='font-bold'>Explicit:</span> {track.explicit ? 'Yes' : 'No'}</span>
               <Separator orientation='h' />
-              <span>Playback Seconds: {track.playbackSeconds}</span>
+              <span><span className='font-bold'>Playback Seconds:</span> {track.playbackSeconds}</span>
               <Separator orientation='h' />
             </div>
           </div>

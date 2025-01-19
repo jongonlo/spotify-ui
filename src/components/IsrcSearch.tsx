@@ -1,6 +1,4 @@
 import { TrackInfo } from './TrackInfo'
-import { Cover } from './Cover'
-import { Separator } from './Separator'
 import { useState } from 'react'
 import useTrackStore from '../store/trackStore'
 import { AlertMessage } from './AlertMessage'
@@ -11,7 +9,6 @@ export const IsrcSearch = () => {
 
 
   const handleChange = (e: any) => {
-    console.log(e.target.value)
     setIsrc(e.target.value);
   }
 
@@ -37,12 +34,12 @@ export const IsrcSearch = () => {
           onClose={() => setErrorMessage({})}
         />
       )}
-      
+
+        {track.name == null ? <span>No Results</span> :
           <>
             <TrackInfo track={track} />
-
           </>
-        
+        }
 
     </>
   )
